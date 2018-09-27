@@ -24,9 +24,9 @@ class Position
         $state = $rawPosition['state'];
         $name = $rawPosition['name'];
         $friendly_id = $rawPosition['friendly_id'];
-        $description = $rawPosition['description'];
-        $questionnaire_id = $rawPosition['questionnaire_id'];
-        $scorecard_id = $rawPosition['scorecard_id'];
+        $description = $rawPosition['description'] ?? '';
+        $questionnaire_id = $rawPosition['questionnaire_id'] ?? '';
+        $scorecard_id = $rawPosition['scorecard_id'] ?? '';
         
         return new Position(
             $id,
@@ -55,19 +55,6 @@ class Position
         $this->description = $description;
         $this->questionnaire_id = $questionnaire_id;
         $this->scorecard_id = $scorecard_id;
-    }
-
-    public function getCandidates($companyId, $positionId)
-    {
-        $response = $this->api->get('company/' . $companyId . '/position/' . $positionId . '/candidates');
-
-        $candidates = [];
-
-        foreach ($response as $candidate) {
-            $candidates[] = CandidateItem::fromArray($candidate);
-        }
-
-        return $candidates;
     }
 
     /**
