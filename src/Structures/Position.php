@@ -57,19 +57,6 @@ class Position
         $this->scorecard_id = $scorecard_id;
     }
 
-    public function getCandidates($companyId, $positionId)
-    {
-        $response = $this->api->get('company/' . $companyId . '/position/' . $positionId . '/candidates');
-
-        $candidates = [];
-
-        foreach ($response as $candidate) {
-            $candidates[] = CandidateItem::fromArray($candidate);
-        }
-
-        return $candidates;
-    }
-
     /**
      * @return bool
      */
