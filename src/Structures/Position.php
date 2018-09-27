@@ -24,9 +24,9 @@ class Position
         $state = $rawPosition['state'];
         $name = $rawPosition['name'];
         $friendly_id = $rawPosition['friendly_id'];
-        $description = $rawPosition['description'];
-        $questionnaire_id = $rawPosition['questionnaire_id'];
-        $scorecard_id = $rawPosition['scorecard_id'];
+        $description = $rawPosition['description'] ?? '';
+        $questionnaire_id = $rawPosition['questionnaire_id'] ?? '';
+        $scorecard_id = $rawPosition['scorecard_id'] ?? '';
         
         return new Position(
             $id,

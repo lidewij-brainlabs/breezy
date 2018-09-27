@@ -19,9 +19,9 @@ class Candidate
         $creation_date = $rawCandidate['creation_date'];
         $email_address = $rawCandidate['email_address'];
         $name = $rawCandidate['name'];
-        $overall_score = $rawCandidate['overall_score'];
-        $phone_number = $rawCandidate['phone_number'];
-        $questionnaire = $rawCandidate['questionnaire'];
+        $overall_score = $rawCandidate['overall_score'] ?? [];
+        $phone_number = $rawCandidate['phone_number'] ?? '';
+        $questionnaire = $rawCandidate['questionnaire'] ?? '';
         $stage = $rawCandidate['stage'];
 
         return new Candidate(
@@ -43,7 +43,7 @@ class Candidate
         string $name,
         array $overall_score,
         string $phone_number,
-        $questionnaire,
+        string $questionnaire,
         array $stage
     ) {
         $this->id = $id;
