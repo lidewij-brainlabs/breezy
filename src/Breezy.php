@@ -4,6 +4,7 @@ namespace Briedis\Breezy;
 
 use Briedis\Breezy\Exceptions\BreezyException;
 use Briedis\Breezy\Structures\Candidate;
+use Briedis\Breezy\Structures\CandidateMetaData;
 use Briedis\Breezy\Structures\Company;
 use Briedis\Breezy\Structures\Position;
 
@@ -103,7 +104,7 @@ class Breezy
 
     public function getCandidateMetaData($companyId, $positionId, $candidateId)
     {
-        $response = $this->api->get('company/' . $companyId . '/position/' . $positionId . '/candidate' . $candidateId . '/meta');
+        $response = $this->api->get('company/' . $companyId . '/position/' . $positionId . '/candidate/' . $candidateId . '/meta');
 
         $candidateMetaData = CandidateMetaData::fromResponse($response);
 
