@@ -101,6 +101,15 @@ class Breezy
         return $candidates;
     }
 
+    public function getCandidateMetaData($companyId, $positionId, $candidateId)
+    {
+        $response = $this->api->get('company/' . $companyId . '/position/' . $positionId . '/candidate' . $candidateId . '/meta');
+
+        $candidateMetaData = CandidateMetaData::fromResponse($response);
+
+        return $candidateMetaData;
+    }
+
     /**
      * Get candidate
      * @param string $companyId
