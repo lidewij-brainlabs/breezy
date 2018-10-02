@@ -26,13 +26,13 @@ class CandidateMetaData
         $assessments = $rawCandidateMetaData['assessments'];
         $stream = $rawCandidateMetaData['stream'];
         $schedule = $rawCandidateMetaData['schedule'];
-        $documetns = $rawCandidateMetaData['documents'];
+        $documents = $rawCandidateMetaData['documents'];
         $questionnaires = $rawCandidateMetaData['questionnaires'];
         $conversation = $rawCandidateMetaData['conversation'];
         $references = $rawCandidateMetaData['references'];
         $scorecards = $rawCandidateMetaData['scorecards'];
 
-        return new Candidate(
+        return new CandidateMetaData(
             $tasks,
             $background_checks,
             $notepad,
