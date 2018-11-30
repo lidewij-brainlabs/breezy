@@ -56,65 +56,41 @@ class Candidate
         $this->stage = $stage;
     }
 
-    /**
-     * @return mixed
-     */
     public function getId()
     {
         return $this->id;
     }
 
-    /**
-     * @return mixed
-     */
     public function getCreationDate()
     {
         return $this->creation_date;
     }
 
-    /**
-     * @return mixed
-     */
     public function getEmailAddress()
     {
         return $this->email_address;
     }
 
-    /**
-     * @return mixed
-     */
     public function getName()
     {
         return $this->name;
     }
 
-    /**
-     * @return mixed
-     */
     public function getOverallScore()
     {
         return $this->overall_score;
     }
 
-    /**
-     * @return mixed
-     */
     public function getPhoneNumber()
     {
         return $this->phone_number;
     }
 
-    /**
-     * @return mixed
-     */
     public function getQuestionnaire()
     {
         return $this->questionnaire;
     }
 
-    /**
-     * @return mixed
-     */
     public function getStage()
     {
         return $this->stage;

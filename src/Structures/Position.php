@@ -57,65 +57,41 @@ class Position
         $this->scorecard_id = $scorecard_id;
     }
 
-    /**
-     * @return bool
-     */
     public function isPublished()
     {
         return $this->state === self::STATE_PUBLISHED;
     }
 
-    /**
-     * @return mixed
-     */
     public function getId()
     {
         return $this->id;
     }
 
-    /**
-     * @return mixed
-     */
     public function getState()
     {
         return $this->state;
     }
 
-    /**
-     * @return mixed
-     */
     public function getName()
     {
         return $this->name;
     }
 
-    /**
-     * @return mixed
-     */
     public function getFriendlyId()
     {
         return $this->friendly_id;
     }
 
-    /**
-     * @return mixed
-     */
     public function getDescription()
     {
         return $this->description;
     }
 
-    /**
-     * @return mixed
-     */
     public function getQuestionnaireId()
     {
         return $this->questionnaire_id;
     }
 
-    /**
-     * @return mixed
-     */
     public function getScorecardId()
     {
         return $this->scorecard_id;
