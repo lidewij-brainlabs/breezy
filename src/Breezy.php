@@ -37,7 +37,7 @@ class Breezy
     public function signIn($email, $password)
     {
         $token = $this->api->signIn($email, $password);
-        
+
         return $token;
     }
 
@@ -48,6 +48,19 @@ class Breezy
     public function setToken($token)
     {
         $this->api->setToken($token);
+    }
+
+    public function getCompanies()
+    {
+        $response = $this->api->get('companies/');
+
+        $companies = [];
+
+        foreach ($response as $company) {
+            $companies[] = Company::fromResponse($company);
+        }
+
+        return $companies;
     }
 
     /**
@@ -139,6 +152,22 @@ class Breezy
         }
 
         return $candidates;
+    }
+
+    public function getPipelines($companyId)
+    {
+        $response = $this->api->get('company/' . $companyId . '/pipelines');
+
+        return $response;
+    }
+
+    public function getPipeline(
+        string $companyId,
+        string $pipelineId
+    ) {
+        $response = $this->api->get('company/' . $companyId . '/pipeline/' . $pipelineId);
+
+        return $response;
     }
 
     /**
