@@ -44,57 +44,36 @@ class Company
         $this->initial = $initial;
     }
 
-    /**
-     * @return mixed
-     */
     public function getId()
     {
         return $this->id;
     }
 
-    /**
-     * @return mixed
-     */
     public function getName()
     {
         return $this->name;
     }
 
-    /**
-     * @return mixed
-     */
     public function getFriendlyId()
     {
         return $this->friendly_id;
     }
 
-    /**
-     * @return mixed
-     */
     public function getCreationDate()
     {
         return $this->creation_date;
     }
 
-    /**
-     * @return mixed
-     */
     public function getUpdatedDate()
     {
         return $this->updated_date;
     }
 
-    /**
-     * @return mixed
-     */
     public function getMemberCount()
     {
         return $this->member_count;
     }
 
-    /**
-     * @return mixed
-     */
     public function getInitial()
     {
         return $this->initial;
